@@ -1,0 +1,12 @@
+numpy
+scipy
+future
+matplotlib
+pillow >= 6.2.0
+opencv-python
+scikit-image
+pyaml
+flask
+flask-cors
+torch
+torchvision

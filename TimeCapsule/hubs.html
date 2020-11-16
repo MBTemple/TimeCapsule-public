@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <title>Hubs | TimeCapsule</title>
+      <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+      <link rel="stylesheet" href="fonts/font-awesome.min.css">
+      <link rel="stylesheet" href="fonts/ionicons.min.css">
+      <link rel="stylesheet" href="fonts/line-awesome.min.css">
+      <link rel="stylesheet" href="fonts/simple-line-icons.min.css">
+      <link rel="stylesheet" href="css/Drag--Drop-Upload-Form.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+      <link rel="stylesheet" href="css/Login-Form-Dark.css">
+      <link rel="stylesheet" href="css/Profile-Card.css">
+      <link rel="stylesheet" href="css/Profile-Edit-Form-1.css">
+      <link rel="stylesheet" href="css/Profile-Edit-Form.css">
+      <link rel="stylesheet" href="css/smoothproducts.css">
+      <link rel="stylesheet" href="css/Social-Icons.css">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+      <link rel="manifest" href="images/favicon/site.webmanifest">
+      <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+      <script src="https://demos.jquerymobile.com/1.4.2/js/jquery.js"></script>
+      <script src="https://demos.jquerymobile.com/1.4.2/js/jquery.mobile-1.4.2.min.js"></script> 
+      <style>
+         #map{
+         height:500px;
+         width: 100%;
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar2" style="background-image: url(images/materialDark2.webp);">
+         <div class="container">
+            <a class="navbar-brand logo" href="home.html" style="color: #fff;font-weight: 700;">TimeCapsule</a>
+			<button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="navbar-toggler-icon"></span>
+			</button>
+            <div class="collapse navbar-collapse" id="navcol-2" style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;">
+               <ul class="nav navbar-nav ml-auto">
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="photophix.html" style="color: white;"><button class="btn btn-primary" type="button" style="width: 70px;min-width: 0px;max-width: 100%;height: 28px;padding: 0px 0px 0px;">Upload</button></a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link active" href="hubs.html" style="color: white;">Hub Portal</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="profile.html" style="color: white;">Profile</a></li>
+                  <li class="nav-item" role="presentation"><a id="logout" class="nav-link" href="#" style="color: white;">Logout</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <main class="page landing-page" style="color: white;">
+         <section class="clean-block clean-hero" style="background-image: url(images/worldHubPage.webp);color: rgba(9,162,255,0);">
+            <div class="text" style="padding-top: 100px;">
+               <h2 style="font-size: 50px;font-weight: 600;">WorldHub</h2>
+               <p style="font-size: 25px;">Where are we exploring today?</p>
+            </div>
+         </section>
+         <section></section>
+         <section style="background: linear-gradient(45deg, black, #b36729 60%, #85331c ); class="clean-block clean-info dark">
+            <div>
+               <div class="container">
+                  <h1><i class="fa fa-search"></i>Search Hubs</h1>
+                  <input type="search">
+               </div>
+            </div>
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-md-4" style="border-radius: 25px; text-align:center; background:linear-gradient(180deg, tan, #b36729 30%, #85331c );">
+                     <h1>Browse Your Hubs</h1>
+                     <p style="color:white; font-size:large;"><strong>#TempleUniversity2009</strong><br><strong>#TempleUniversity2010</strong><br><strong>#TempleUniversity2011</strong><br><strong>#TempleUniversity2012</strong><br><strong>#MarchMadness1997</strong><br><strong>#Olympics2016</strong><br><strong>#WomensMarch1982</strong><br><strong>#FoundWaldo</strong><br><strong>#TempleParties2011</strong><br><strong>#BattleofWaterloo</strong><br><strong>#Philadelphia1997</strong><br><br></p>
+                  </div>
+                  <div class="col-md-8">
+                     <h1 style="text-align:center;">#Eagles2018 (Recommended Map)</h1>
+                     <div id="map"></div>
+					 <br>
+					 <br>
+                     <div class="container">
+                        <form style="border-radius: 25px; text-align:center; background:linear-gradient(180deg, tan, #b36729 30%, #85331c );"
+			      id="location-form" enctype="multipart/form-data">
+                           <h2 style="text-align:center;" id="text-center">New Time Capsule Entry? </h2>
+                           <br>
+                           <h4 style="text-align:center;">Enter Location Name or Address: </h4>
+                           <input type="text" id="location-input" class="form-control form-control-me"
+                              name="address">
+                           <h4 style="text-align:center;">Upload Image: </h4>
+                           <input type="file" accept="image/*"
+                              name="my-image"  id="my-image" required />
+							  <br>
+                           <h4 style="text-align:center;">Enter Image Title: </h4>
+                           <input type="text" id="title-input" class="form-control form-control-me"
+                              name="title" required>
+                           <h4 style="text-align:center;">Enter Image Description: </h4>
+                           <input type="text" id="description-input" class="form-control form-control-me"
+                              name="description" required>
+                           <h4 style="text-align:center;">Enter Image Date: </h4>
+                           <input type="date" id="date-input"
+                              name="image-date" required>
+                           <br>
+                           <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
+                           <div class="btn btn-info btn-block" id="Message"></div>
+                        </form>
+                        <div class="card-block" id="formatted-address"></div>
+                        <div class="card-block" id="address-components"></div>
+                        <div class="card-block" id="geometry"></div>
+                     </div>
+                     <script>
+                        // Get location form
+                        var locationForm = document.getElementById('location-form');
+                        
+                        // Listen for submit
+                        if(locationForm){
+                        	locationForm.addEventListener('submit', geocode);
+                        }
+                        function geocode(e){
+                          // Prevent actual submit
+                          e.preventDefault();
+                        
+                          var location = document.getElementById('location-input').value;
+                        //let axios = require("axios");
+                        
+                          axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+                            params:{
+                              address:location,
+                              key:'AIzaSyDGZH2EaSxzoOaMq1dF4wclbya52TAnL4g'
+                            }
+                          })
+                          .then(function(response){
+                            // Log full response
+                            console.log(response);
+                        
+                            // Formatted Address
+                            var formattedAddress = response.data.results[0].formatted_address;
+                            var formattedAddressOutput = `
+                              <ul class="list-group">
+                                <li class="list-group-item">${formattedAddress}</li>
+                              </ul>
+                            `;
+                        
+                            // Address Components
+                            var addressComponents = response.data.results[0].address_components;
+                            var addressComponentsOutput = '<ul class="list-group">';
+                            for(var i = 0;i < addressComponents.length;i++){
+                              addressComponentsOutput += `
+                                <li style="color:black"; class="list-group-item"><strong>${addressComponents[i].types[0]}</strong>: ${addressComponents[i].long_name}</li>
+                              `;
+                            }
+                            addressComponentsOutput += '</ul>';
+                        
+                            // Geometry
+                            var lat = response.data.results[0].geometry.location.lat;
+                            var lng = response.data.results[0].geometry.location.lng;
+                            var geometryOutput = `
+                              <ul style="color:black"; class="list-group">
+                                <li class="list-group-item" name="latitude"> <strong>Latitude</strong>: ${lat}</li>
+                                <li class="list-group-item" name="longitude"> <strong>Longitude</strong>: ${lng}</li>
+                              </ul>
+                            `;
+                        
+                            // Output to app
+                            document.getElementById('formatted-address').innerHTML = formattedAddressOutput;
+                            document.getElementById('address-components').innerHTML = addressComponentsOutput;
+                            document.getElementById('geometry').innerHTML = geometryOutput;
+                        // Call insert2.php here
+                        // Get form data here
+                        
+                        var formData = {
+                        	'address'            : $('input[name=address]').val(),
+                        	'title'              : $('input[name=title]').val(),
+                        	'description'        : $('input[name=description]').val(),
+                        	'image-date'         : $('input[name=image-date]').val(),
+                        	'latitude'           : lat,
+                        	'longitude'          : lng,
+                        	'my-image'					 : $('input[name=my-image]').val()
+                        };
+                        //alert('longitude=['+formData.longitude+']');
+                        //alert('description=['+formData.description+']');
+                        $.ajax({
+                        	type: "post",
+                        	url: "http://tec2.hpc.temple.edu/~tue57166/4398/Project/php/insert2.php",
+                        	data: formData,
+                        	async: true,
+                        	dataType: "json",
+                        	encode: true
+                        }).always(function (data) {
+                        	console.log(data);
+                        	$("#Message").html(data.Message);
+                        })
+                          })
+                          .catch(function(error){
+                            console.log(error);
+                          });
+                        }
+                     </script>
+                     <script>
+                        //initMap will create a new "World" that will take on a year that a user can subscribe to
+                        function initMap(){
+                        
+                          //Map Options
+                        var options = {
+                          zoom:10,
+                          center:{lat:39.9526, lng:-75.1652}
+                        }
+                        //New Map
+                          var map = new google.maps.Map(document.getElementById('map'), options);
+                        
+                          //Listen for Click on Map
+                        
+                          google.maps.event.addListener(map, 'click', function(event){
+                            // Add marker
+                            addMarker({
+                              coords:event.latLng,
+                              content: document.getElementById("location-form")},
+                            );
+                          });
+                        
+                        // contentString must be specific to a photo/marker
+                        
+                        var contentString = '<div style="color:black" id="content">'+
+                          '<div id="siteNotice">'+
+                          '</div>'+
+                          '<h3 id="location-inputX" class="firstHeading">Germantown: Wayne and West Coulter</h3>'+
+                          '<div id="bodyContent">'+
+                          '<p>Taken after the Superbowl Parade won by the Eagles in Feb 2018 </p>'+
+                          '<div id="hubPhoto">'+
+                          '<p> <img src="https://whyy.org/wp-content/uploads/2018/02/cohen-eagles_win-14-675x450.jpg" alt = "Young People on Street at Night" height="100%" width="100%"></p>'+
+                          '</div>'+
+                          '<p>(Photo Taken Feb 28th, 2020).</p>'
+                          '</div>'+
+                          '</div>';
+                        
+                          //Array of markers
+                          var markers = [
+                          {
+                            coords:{lat:40.0293,lng:-75.1746},
+                            content: contentString
+                          },
+                          {
+                            coords:{lat:39.9476,lng:-75.1600},
+                            content:'<h3 style="color:black"> Sampan Restaurant </h1>'},
+                          {
+                            coords:{lat:39.9858,lng:-75.2156},
+                            content:'<h3 style="color:black"> Fairmount Park </h1>'}]
+                        
+                        //Loop through markers
+                        for(var i = 0; i<markers.length; i++){
+                        addMarker(markers[i]);
+                        }
+                          // Add Marker function
+                          function addMarker(props){
+                            var marker = new google.maps.Marker({
+                              position:props.coords,
+                              map:map,
+                        draggable:true
+                              //icon:props.iconImage
+                            });
+                              marker.setIcon('https://i.imgur.com/YxFKUPd.png');
+                        
+                            // Check Info Window content
+                            if(props.content){
+                              //Info Window
+                              var infoWindow = new google.maps.InfoWindow({
+                                content:props.content
+                              });
+                              //new marker
+                              marker.addListener('click', function(){
+                                if (props.content)
+                                infoWindow.open(map,marker);
+                              });
+                            }
+                          }
+                        }
+                     </script>
+                     <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=***KEY HERE***&callback=initMap"></script>
+                  </div>
+               </div>
+               <div class="row align-items-center">
+                  <div class="col-md-4"></div>
+                  <div style="text-align:center"; class="col-md-8">
+                     <p style="text-align:center";>Here you can check where your Hubs are populated on a specific year range!</p>
+                        <form>
+                           <div data-role="rangeslider">
+                              <label text-align:left for="range-1a">World Year Range Start:</label>
+                              <input type="range" name="range-1a" id="range-1a" min="1815" max="2020" value="1820" data-popup-enabled="true" data-show-value="false">
+                              <label text-align:right for="range-1b">To</label>
+                              <input type="range" name="range-1b" id="range-1b" min="1815" max="2020" value="2020" data-popup-enabled="true" data-show-value="false">
+                           </div>
+                        </form>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="page-footer dark" style="padding: 1px; position: absolute; width: 100%">
+         <div class="footer-copyright">
+            <p>© 2020 TimeCapsule</p>
+         </div>
+      </footer>
+      <script src="js/jquery.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+      <script src="js/smoothproducts.min.js"></script>
+      <script src="js/theme.js"></script>
+      <script src="js/Profile-Edit-Form.js"></script>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script>
+         $(document).ready(function() {
+         	// Protecting the digital assets here
+         	$.ajax({
+         		type: 'GET',
+         		url: 'http://tec2.hpc.temple.edu/~tue57166/4398/Project/php/readRegState.php',
+         		async: false,
+         		dataType: 'json',
+         		encode: true
+         		}).always(function(data) {
+         			console.log(data);
+         			if (parseInt(data.value) != 4) {
+         				window.location="index.html";
+         			}
+         			$("#email").html(data.Email);
+         	})
+         	$("#logout").click(function () {
+         		$.ajax({
+         			type: 'GET',
+         			url: 'http://tec2.hpc.temple.edu/~tue57166/4398/Project/php/logout.php',
+         			async: false,
+         			dataType: 'json',
+         			encode: true
+         			}).always(function(data) {
+         				console.log(data);
+         				window.location="index.html";
+         		})
+         	})
+         })
+      </script> 
+   </body>
+</html>

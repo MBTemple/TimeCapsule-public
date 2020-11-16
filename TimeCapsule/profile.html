@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <title>PhotoHub | TimeCapsule</title>
+      <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+      <link rel="stylesheet" href="fonts/font-awesome.min.css">
+      <link rel="stylesheet" href="fonts/ionicons.min.css">
+      <link rel="stylesheet" href="fonts/line-awesome.min.css">
+      <link rel="stylesheet" href="fonts/simple-line-icons.min.css">
+      <link rel="stylesheet" href="css/Drag--Drop-Upload-Form.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+      <link rel="stylesheet" href="css/Login-Form-Dark.css">
+      <link rel="stylesheet" href="css/Profile-Card.css">
+      <link rel="stylesheet" href="css/Profile-Edit-Form-1.css">
+      <link rel="stylesheet" href="css/Profile-Edit-Form.css">
+      <link rel="stylesheet" href="css/smoothproducts.css">
+      <link rel="stylesheet" href="css/Social-Icons.css">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+      <link rel="manifest" href="images/favicon/site.webmanifest">
+      <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+   </head>
+   <body>
+      <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar2" style="background-image: url(images/materialDark2.webp);">
+         <div class="container">
+            <a class="navbar-brand logo" href="home.html" style="color: #fff;font-weight: 700;">TimeCapsule</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+               class="collapse navbar-collapse" id="navcol-2" style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;">
+               <ul class="nav navbar-nav ml-auto">
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="photophix.html" style="color: white;"><button class="btn btn-primary" type="button" style="width: 70px;min-width: 0px;max-width: 100%;height: 28px;padding: 0px 0px 0px;">Upload</button></a></li>
+                  <li class="nav-item"
+                     role="presentation"><a class="nav-link" href="hubs.html" style="color: white;">Hub Portal</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="editProfile.html" style="color: white;">Edit Profile</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" id="logoutBtn" href="#" style="color: white;">Logout</a></li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <main class="page landing-page">
+         <div class="text-center profile-card" style="margin:15px;background-color:#ffffff;">
+            <div class="profile-card-img" style="background-image:url();height:150px;background-size:cover;"></div>
+            <div>
+               <img class="rounded-circle" style="margin-top:-70px;" src="images/avatars/avatar4.png" height="150px">
+               <h3>
+                  <output type="text" style="font-weight: bold;" id="first-name"></output>
+                  <output type="text" style="font-weight: bold;" id="last-name"></output>
+               </h3>
+               <p style="padding:20px;padding-bottom:0;padding-top:5px;">
+                  <output type="text" style="font-weight: bold;" id="about-me"></output>
+               </p>
+            </div>
+            <div class="row" style="padding:0;padding-bottom:10px;padding-top:20px;">
+               <div class="col-md-6">
+                  <p class="text-nowrap text-right">Age</p>
+                  <p class="text-right"><output type="text" style="font-weight: bold;" id="age"></output></p>
+               </div>
+               <div class="col-md-6">
+                  <p class="text-left">Country</p>
+                  <p class="text-left"><output type="text" style="font-weight: bold;" id="country"></output></p>
+               </div>
+               <div class="col-md-6">
+                  <p class="text-nowrap text-right">Image Count</p>
+                  <p class="text-right"><strong>9</strong></p>
+               </div>
+               <div class="col-md-6">
+                  <p class="text-left">Hubs Joined</p>
+                  <p class="text-left"><strong>17</strong></p>
+               </div>
+               <div class="col-md-6">
+                  <p class="text-nowrap text-right">Friends</p>
+                  <p class="text-right"><strong>524</strong></p>
+               </div>
+               <div class="col-md-6">
+                  <p class="text-left">Shares </p>
+                  <p class="text-left"><strong>63</strong></p>
+               </div>
+            </div>
+         </div>
+         <section class="clean-block clean-info dark" style="padding: 1px;">
+            <div class="container">
+               <div class="block-heading">
+                  <h2 class="text-info">Your Pictures</h2>
+                  <p></p>
+                  <section class="clean-block clean-gallery dark">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6 col-lg-4 item"><a class="lightbox" href="images/scenery/image1.jpg"><img class="img-thumbnail img-fluid image" src="images/scenery/image1.jpg"></a></div>
+                           <div class="col-md-6 col-lg-4 item"><a class="lightbox" href="images/scenery/image4.jpg"><img class="img-thumbnail img-fluid image" src="images/scenery/image4.jpg"></a></div>
+                           <div class="col-md-6 col-lg-4 item"><a class="lightbox" href="images/scenery/image6.jpg"><img class="img-thumbnail img-fluid image" src="images/scenery/image6.jpg"></a></div>
+                           <div class="col-md-6 col-lg-4 item"><a class="lightbox" href="images/scenery/image5.jpg"><img class="img-thumbnail img-fluid image" src="images/scenery/image5.jpg"></a></div>
+                           <div class="col-md-6 col-lg-4 item"><a class="lightbox" href="images/scenery/image1.jpg"><img class="img-thumbnail img-fluid image" src="images/scenery/image1.jpg"></a></div>
+                           <div class="col-md-6 col-lg-4 item"><a class="lightbox" href="images/scenery/image4.jpg"><img class="img-thumbnail img-fluid image" src="images/scenery/image4.jpg"></a></div>
+                           <div class="col-md-6 col-lg-4 item"><a class="lightbox" href="images/scenery/image6.jpg"><img class="img-thumbnail img-fluid image" src="images/scenery/image6.jpg"></a></div>
+                           <div class="col-md-6 col-lg-4 item"><a class="lightbox" href="images/scenery/image5.jpg"><img class="img-thumbnail img-fluid image" src="images/scenery/image5.jpg"></a></div>
+                           <div class="col-md-6 col-lg-4 item"><a class="lightbox" href="images/scenery/image1.jpg"><img class="img-thumbnail img-fluid image" src="images/scenery/image1.jpg"></a></div>
+                        </div>
+                     </div>
+                  </section>
+               </div>
+            </div>
+         </section>
+         <section class="clean-block clean-info dark" style="padding: 1px;">
+            <div class="container">
+            </div>
+         </section>
+      </main>
+      <footer class="page-footer dark" style="padding: 1px; position: absolute; width: 100%">
+         <div class="footer-copyright">
+            <p>© 2020 TimeCapsule</p>
+         </div>
+      </footer>
+      <script src="js/jquery.min.js"></script>
+      <script src="bootstrap/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+      <script src="js/smoothproducts.min.js"></script>
+      <script src="js/theme.js"></script>
+      <script src="js/Profile-Edit-Form.js"></script>
+      <script>
+         $(document).ready(function() {
+         //Read $_SESSION["RegState"]
+         		$.ajax({
+         			type: "post",
+         			url: "http://tec2.hpc.temple.edu/~tue57166/4398/Project/php/readRegState.php",
+         			async: false,
+         			dataType: "json",
+         			encode: true,
+         		}).always(function(data) {
+         			console.log(data);
+         			if (parseInt(data.value) != 4) {
+                   window.location = "index.html";
+                 };
+         		})
+         	$("#logoutBtn").click(function() {
+         		$.ajax({
+         			type: "post",
+         			url: "http://tec2.hpc.temple.edu/~tue57166/4398/Project/php/logout.php",
+         			async: false,
+         			dataType: "json",
+         			encode: false,
+         		}).always(function(data) {
+         			console.log(data);
+         			window.location="index.html";
+         		})
+         	})
+         })
+      </script>
+      <script src="js/updateProfile.js"></script>
+   </body>
+</html>

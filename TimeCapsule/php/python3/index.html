@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script language="javascript" type="text/javascript" src="static/js/jquery-3.4.1.js"></script>
+    <script language="javascript" type="text/javascript" src="static/js/fabric.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="static/css/uploader.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+    <title>TimeCapsule | Inpaint</title>
+	<link rel="icon" type="image/x-icon" href="static/favicon.ico">
+</head>
+
+<body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+       <header style="height:30px">
+    </header>
+
+    <div id="content-before">
+
+        <label class="pointer" for="inImg" style="text-align: center;">                            <!-- Upload -->
+            <div id="uploader">
+                    <div class="uploadDropzone heightCentering_parent">
+                        <div class="heightCentering_child">
+                            <i class="fa material-icons cloud">cloud_upload</i>
+                            <h5>Please upload a file</h5>
+                        </div>
+                    </div>
+            </div>
+            <input type="file" id="inImg" accept="image/*" style="display:none;">
+        </label>
+
+        <div class="canvas" style="display: none;">                                                     <!--  Drawing Canvas  -->
+            <div id="cont">
+                <canvas id="cnvs1" width="512px" height="512px"></canvas>
+                <canvas id="cnvs2" width="512px" height="512px"></canvas>
+                <div id="loading" style="display: none;" class="heightCentering_child_parent">      <!-- Wait　Screen -->
+                        <div class="heightCentering_child">
+                            <i class="fa fa-spinner fa-pulse fa-5x fa-fw waiting"></i>
+                            <p>Please Wait...</p>
+                        </div>
+                </div>
+            </div>
+
+            <div id="canvasButton">
+                <input type="button" value="Change Image" id="changeImg" class="btn btn-outline-primary">        <!-- to be revised -->
+                <input type="button" value="Next" id="paint" class="mode1 btn btn-outline-primary">
+                <button id="sendImg" class="mode2 btn btn-outline-primary">Inpaint</button>
+            </div>
+            <div id = "canvasDescription">
+                <h6 class="mode1">Move the photo to the proper position</h6>
+                <h6 class="mode2">Please paint over what you want to fix</h6>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div id="content-after" style="display: none; text-align: center">                              <!--  After Restoration  -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6" >
+                <img src="#" id="original-img" alt="">
+                <h5>Before</h5>
+            </div>
+            <div class="col-sm-6">
+                <img src="#" id="result-img" alt="">
+                <h5>After</h5>
+            </div>
+          </div>
+        </div>
+        <button onclick="location.reload();" class="mode2 btn btn-primary">Again</button>
+    </div>
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+    </div>
+
+    <script language="javascript" type="text/javascript" src="static/js/script.js"></script>
+
+</body>
+</html>
